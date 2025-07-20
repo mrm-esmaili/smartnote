@@ -1,0 +1,14 @@
+body {
+    direction: rtl;
+    padding: 30px;
+    background: #f9f9f9;
+    font-family: "Tahoma";
+}
+.note-editor {
+  direction: rtl !important;
+  text-align: right !important;
+}
+.note-editable {
+  direction: rtl !important;
+  text-align: right !important;
+}
