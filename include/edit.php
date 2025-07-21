@@ -51,9 +51,9 @@ foreach ($oldImages as $old) {
     if (!in_array($old['file_path'], $newImagesRaw)) {
         $file_path_old = get_root_dir() . $old['file_path'];
         if (file_exists($file_path_old)) {
-            unlink($file_path_old);
+            //unlink($file_path_old);
         }
-        ex_query("DELETE FROM uploads WHERE file_path = ?", [$old['file_path']]);
+        //ex_query("DELETE FROM uploads WHERE file_path = ?", [$old['file_path']]);
     }
 }
 
