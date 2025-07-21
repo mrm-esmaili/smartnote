@@ -17,11 +17,15 @@ foreach ($images as $img) {
     $data = substr($src, strpos($src, ',') + 1);
     $data = base64_decode($data);
 
-    $imageName = get_root_dir() . 'uploads/' . time() . '_' . rand(1000, 9999) . '.' . $type[1];
+    $imageNameRaw = 'uploads/' . time() . '_' . rand(1000, 9999) . '.' . $type[1];
+
+    $imageName = get_root_dir() . $imageNameRaw;
+    $imageUrl = get_root_url() . $imageNameRaw;
+
     file_put_contents($imageName, $data);
 
-    $img->setAttribute('src', $imageName);
-    ex_query("INSERT INTO uploads (file_path) VALUES (?)", [$imageName]);
+    $img->setAttribute('src', $imageNameRaw);
+    ex_query("INSERT INTO uploads (file_path) VALUES (?)", [$imageNameRaw]);
   }
 }
 

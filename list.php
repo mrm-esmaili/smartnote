@@ -25,7 +25,7 @@ $results = get_select_query("SELECT id, title, content_text, created_at FROM con
 
         <?php if (!empty($results)): ?>
             <?php foreach ($results as $row): ?>
-                <div class="content-box">
+                <div class="content-box text-right">
                     <h4><?= htmlspecialchars($row['title']) ?></h4>
                     <div class="content-meta">🕓 <?= $row['created_at'] ?> | شناسه: <?= $row['id'] ?></div>
                     <div class="content-preview">

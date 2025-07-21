@@ -57,6 +57,10 @@ body {
     margin-bottom: 10px;
 }
 
+.content-box h3 {
+    margin-bottom: 15px;
+}
+
 .content-preview {
     color: #444;
     margin-top: 10px;
@@ -66,4 +70,9 @@ body {
     font-size: 0.85em;
     color: #888;
     margin-bottom: 5px;
+}
+
+.content-body {
+    font-size: 1.05em;
+    line-height: 2;
 }
