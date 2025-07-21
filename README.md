@@ -62,6 +62,7 @@ CREATE TABLE uploads (
   uploaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (content_id) REFERENCES contents(id) ON DELETE SET NULL
 );
+```
 
 ⚙️ نحوه راه‌اندازی
 - فایل‌های summernote, bootstrap, sweetalert2 رو در پوشه مربوطه قرار دهید.
