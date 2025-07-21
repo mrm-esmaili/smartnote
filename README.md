@@ -3,7 +3,7 @@
 
 ## ✨ ویژگی‌ها
 - ویرایش متن با استفاده از Summernote
-- پشتیبانی از تگ‌های H1-H3
+- پشتیبانی از تگ‌های H1-H6
 - درج تصاویر داخل محتوا و ذخیره‌سازی پس از تأیید
 - ذخیره محتوا در پایگاه‌داده MySQL
 - ذخیره تصاویر در پوشه `uploads` و ثبت مسیر در دیتابیس
@@ -45,16 +45,18 @@ SmartNote/
 
 ## 🧪 پایگاه‌داده
 
-```sql
+
 ### جدول `contents`
+```sql
 CREATE TABLE contents (
   id INT AUTO_INCREMENT PRIMARY KEY,
   title VARCHAR(255) NOT NULL,
   content_text TEXT NOT NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
+```
 ### جدول `upload`
+```sql
 CREATE TABLE uploads (
   id INT AUTO_INCREMENT PRIMARY KEY,
   content_id INT DEFAULT NULL,
