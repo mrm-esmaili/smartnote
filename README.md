@@ -45,6 +45,7 @@ SmartNote/
 
 ## 🧪 پایگاه‌داده
 
+```sql
 ### جدول `contents`
 CREATE TABLE contents (
   id INT AUTO_INCREMENT PRIMARY KEY,
