@@ -29,7 +29,9 @@ $content = str_replace('src="uploads/', 'src="' . $baseUrl . 'uploads/', $conten
     <meta charset="UTF-8" />
     <title>تست summernote</title>
     <link rel="stylesheet" href="<?= get_root_url(); ?>dist/library/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="<?= get_root_url(); ?>dist/style.css?v1.5" />
+    <link rel="stylesheet" href="<?= get_root_url(); ?>dist/library/summernote/summernote-bs4.min.css" />
+    <link rel="stylesheet" href="<?= get_root_url(); ?>dist/library/sweetalert/sweetalert2.min.css" />
+    <link rel="stylesheet" href="<?= get_root_url(); ?>dist/style.css?v1.8" />
 </head>
 
 <body>
@@ -51,7 +53,10 @@ $content = str_replace('src="uploads/', 'src="' . $baseUrl . 'uploads/', $conten
     <!-- JS Libraries -->
     <script src="<?= get_root_url(); ?>dist/library/jquery/jquery-3.5.1.min.js"></script>
     <script src="<?= get_root_url(); ?>dist/library/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="<?= get_root_url(); ?>dist/script.js?v1.5"></script>
+    <script src="<?= get_root_url(); ?>dist/library/summernote/summernote-bs4.min.js"></script>
+    <script src="<?= get_root_url(); ?>dist/library/summernote/lang/summernote-fa-IR.js?v1.2"></script>
+    <script src="<?= get_root_url(); ?>dist/library/sweetalert/sweetalert2.min.js"></script>
+    <script src="<?= get_root_url(); ?>dist/script.js?v1.8"></script>
 </body>
 
 </html>

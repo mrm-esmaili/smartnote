@@ -5,9 +5,18 @@ $db_name = $GLOBALS['db_name'] = $ini['db_name'];
 $db_user = $GLOBALS['db_user'] = $ini['db_user'];
 $db_password = $GLOBALS['db_password'] = $ini['db_password'];
 
+$site_name = $GLOBALS['site_name'] = $ini['site_name'];
+$site_desc = $GLOBALS['site_desc'] = $ini['site_desc'];
 $main_index_url = $GLOBALS['main_index_url'] = $ini['main_index_url'];
 
-$root_dir = $_SERVER['DOCUMENT_ROOT'] . "/smartnote/";
+$domain_name = $GLOBALS['domain_name'] = $ini['domain_name'];
+$is_local = $GLOBALS['is_local'] = $ini['is_local'];
+
+$root_dir = $_SERVER['DOCUMENT_ROOT'];
+
+if(!empty($is_local))
+	$root_dir = $_SERVER['DOCUMENT_ROOT'] . "/$domain_name/";
+
 $GLOBALS['root_dir'] = $root_dir;
 
 // db-functions

@@ -28,7 +28,7 @@ foreach ($images as $img) {
 
         $img->setAttribute('src', $imageNameRaw);
 
-        $savedImages[] = $imageName;
+        $savedImages[] = $imageNameRaw;
     }
 }
 
