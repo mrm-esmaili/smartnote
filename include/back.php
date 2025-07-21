@@ -2,7 +2,9 @@
 require_once '../config.php';
 require get_root_dir() . 'include/functions.php';
 
+$title = $_POST['title'];
 $content = $_POST['content'];
+
 $doc = new DOMDocument();
 @$doc->loadHTML('<?xml encoding="utf-8" ?>' . $content);
 
@@ -15,7 +17,7 @@ foreach ($images as $img) {
     $data = substr($src, strpos($src, ',') + 1);
     $data = base64_decode($data);
 
-    $imageName = 'uploads/' . time() . '_' . rand(1000, 9999) . '.' . $type[1];
+    $imageName = get_root_dir() . 'uploads/' . time() . '_' . rand(1000, 9999) . '.' . $type[1];
     file_put_contents($imageName, $data);
 
     $img->setAttribute('src', $imageName);
@@ -24,5 +26,7 @@ foreach ($images as $img) {
 }
 
 $finalContent = $doc->saveHTML();
-ex_query("INSERT INTO contents (content_text) VALUES (?)", [$finalContent]);
+
+$content_id = ex_query("INSERT INTO contents (title, content_text) VALUES (?, ?)", [$title, $finalContent]);
+
 echo "محتوا و تصاویر با موفقیت ذخیره شدند.";

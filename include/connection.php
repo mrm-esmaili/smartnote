@@ -14,3 +14,10 @@ function ex_query($sql, $params = []) {
   $pdo_statement->execute($params);
   return $pdo_conn->lastInsertId();
 }
+
+function get_select_query($sql, $params = []) {
+    $pdo_conn = get_connection_string();
+    $pdo_statement = $pdo_conn->prepare($sql);
+    $pdo_statement->execute($params);
+    return $pdo_statement->fetchAll(PDO::FETCH_ASSOC);
+}

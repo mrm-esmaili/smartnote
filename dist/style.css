@@ -4,11 +4,66 @@ body {
     background: #f9f9f9;
     font-family: "Tahoma";
 }
+
+/* note-editor */
 .note-editor {
-  direction: rtl !important;
-  text-align: right !important;
+    direction: rtl !important;
+    text-align: right !important;
 }
 .note-editable {
-  direction: rtl !important;
-  text-align: right !important;
+    direction: rtl !important;
+    text-align: right !important;
+}
+.note-editor .modal-header button {
+    position: absolute;
+    left: 0;
+}
+.note-editor .modal-body .sn-checkbox-open-in-new-window .form-check-label {
+    cursor: pointer;
+    margin: 0px 30px;
+}
+.note-editor
+    .modal-body
+    .sn-checkbox-open-in-new-window
+    .form-check-label
+    .form-check-input {
+    margin: 5px -20px;
+}
+.note-editor .modal-body .sn-checkbox-use-protocol {
+    display: none !important;
+}
+.note-editor .modal-body .sn-checkbox-use-protocol .form-check-label {
+    cursor: pointer;
+    margin: 0px 30px;
+}
+.note-editor
+    .modal-body
+    .sn-checkbox-use-protocol
+    .form-check-label
+    .form-check-input {
+    margin: 5px -20px;
+}
+
+/* content-box */
+.content-box {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.content-box h4 {
+    margin-bottom: 10px;
+}
+
+.content-preview {
+    color: #444;
+    margin-top: 10px;
+}
+
+.content-meta {
+    font-size: 0.85em;
+    color: #888;
+    margin-bottom: 5px;
 }

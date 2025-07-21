@@ -37,9 +37,9 @@ SmartNote/
 ## 🧪 پایگاه‌داده
 
 ### جدول `contents`
-```sql
 CREATE TABLE contents (
   id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
   content_text TEXT NOT NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
